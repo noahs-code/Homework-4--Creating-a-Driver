@@ -194,13 +194,13 @@ public class Polynomial {
      */
     public Polynomial add(Polynomial polynomial2){
         for(int i = 0; i < polynomial2.getNumTerms(); i++){
-            Term newTerm = polynomial2.getTerm(i);
+            Term newTerm = polynomial2.getTerm(i); //adds to polynomial 1 by creating a new term and then adding the term to polynomial 1 using addTerm, which already has reformatting and combination of like terms built into it
             this.addTerm(new Term(newTerm.getCoefficient(), newTerm.getExponent()));
         }
 
-        Polynomial newPoly = new Polynomial();
-        newPoly = this;
-        return newPoly;
+        Polynomial newPoly = new Polynomial(); //creates a new polynomial to then act as the return template for the method
+        newPoly = this; //copying values
+        return newPoly; //returning polynomial
 
     }
 }
